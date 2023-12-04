@@ -8,16 +8,29 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+// const db = knex({
+//     client: 'pg',
+//     connection: {
+//       connectionString : process.env.DATABASE_URL,
+//       ssl: { rejectUnauthorized: false },
+//       host: process.env.DATABASE_HOST,
+//       port : 5432,
+//       user : process.env.DATABASE_USER,
+//       password : process.env.DATABASE_PW,
+//       database : process.env.DATABASE_DB
+//     }
+// });
+
 const db = knex({
     client: 'pg',
     connection: {
-      connectionString : process.env.DATABASE_URL,
+      connectionString : 'postgres://face_recognizer_user:I6Cd4RrEJ49znlKD9a7UAcQ9R1ksEa44@dpg-clmrgnvfeb2c73ebf4g0-a/face_recognizer',
       ssl: { rejectUnauthorized: false },
-      host: process.env.DATABASE_HOST,
+      host: 'dpg-clmrgnvfeb2c73ebf4g0-a',
       port : 5432,
-      user : process.env.DATABASE_USER,
-      password : process.env.DATABASE_PW,
-      database : process.env.DATABASE_DB
+      user : 'face_recognizer_user',
+      password : 'I6Cd4RrEJ49znlKD9a7UAcQ9R1ksEa44',
+      database : 'face_recognizer'
     }
 });
 
